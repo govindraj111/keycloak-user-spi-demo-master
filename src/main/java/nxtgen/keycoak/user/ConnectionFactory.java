@@ -6,10 +6,10 @@ import java.sql.SQLException;
 
 public class ConnectionFactory {
 	
-	String driverClassName = "com.mysql.jdbc.Driver";
-	String connectionUrl = "jdbc:mysql://localhost:3306/keycloak";
-	String dbUser = "root";
-	String dbPwd = "ics@123";
+	String driverClassName = "com.mysql.cj.jdbc.Driver";
+	String connectionUrl = "jdbc:mysql://localhost:3306/keycloak?allowPublicKeyRetrieval=true&useSSL=false";
+	String dbUser = "keycloak-user";
+	String dbPwd = "1h7rHhfy3";
 
 	private static ConnectionFactory connectionFactory = null;
 
