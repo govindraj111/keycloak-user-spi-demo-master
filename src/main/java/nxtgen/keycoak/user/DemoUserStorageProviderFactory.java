@@ -31,6 +31,6 @@ public class DemoUserStorageProviderFactory implements UserStorageProviderFactor
     public List<ProviderConfigProperty> getConfigProperties() {
         return ProviderConfigurationBuilder.create()
                 .property("myParam", "My Param", "Some Description", ProviderConfigProperty.STRING_TYPE, "some value", null)
-                .build();
-    }
+				.build();
+	}
 }

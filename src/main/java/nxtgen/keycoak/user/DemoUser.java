@@ -13,19 +13,21 @@ public class DemoUser {
 	private String password;
 	private boolean enabled;
 	private Long created;
+	private String city;
 
 	public DemoUser() {
 	}
 
-	public DemoUser(String id, String firstName, String lastName, boolean enabled, Long created) {
+	public DemoUser(String id, String firstName, String lastName, boolean enabled, Long created, String city) {
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.username = (firstName + "." + lastName).toLowerCase();
-		this.email = this.username + "@flintstones.com";
+		this.email = this.username + "@abc.com";
 		this.password = firstName.toLowerCase();
 		this.enabled = enabled;
 		this.created = created;
+		this.city = city;
 	}
 
 	public void setId(String id) {
@@ -91,5 +93,13 @@ public class DemoUser {
 
 	public void setCreated(Long created) {
 		this.created = created;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
 	}
 }

@@ -21,16 +21,6 @@ class DemoRepository {
 	ResultSet resultSet = null;
 
 	DemoRepository() {
-//      Long created = System.currentTimeMillis();
-
-//      users = Arrays.asList(
-//              new DemoUser("1", "Fred", "Flintstone", true, created),
-//              new DemoUser("2", "Wilma", "Flintstone", true, created),
-//              new DemoUser("3", "Pebbles", "Flintstone", true, created),
-//              new DemoUser("4", "Barney", "Rubble", true, created),
-//              new DemoUser("5", "Betty", "Rubble", true, created),
-//              new DemoUser("6", "Bam Bam", "Rubble", false, created)
-//      );
 
 		try {
 			String queryString = "SELECT * FROM user;";
@@ -51,15 +41,6 @@ class DemoRepository {
 				}
 				System.out.println("");
 
-//				System.out.println(resultSet.getString("id"));
-//				System.out.println(resultSet.getString("username"));
-//				System.out.println(resultSet.getString("firstname"));
-//				System.out.println(resultSet.getString("lastname"));
-//				System.out.println(resultSet.getString("email"));
-//				System.out.println(resultSet.getString("password"));
-//				System.out.println(resultSet.getString("enabled"));
-//				System.out.println(resultSet.getString("created"));
-
 				DemoUser user = new DemoUser();
 				user.setId(resultSet.getString("id"));
 				user.setUsername(resultSet.getString("username"));
@@ -69,12 +50,11 @@ class DemoRepository {
 				user.setPassword(resultSet.getString("password"));
 				user.setEnabled(resultSet.getBoolean("enabled"));
 				user.setCreated(resultSet.getLong("created"));
+				user.setCity(resultSet.getString("city"));
 
 				users.add(user);
 				System.out.println(users);
 			}
-
-//			System.out.println(users.size());
 
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -94,12 +74,6 @@ class DemoRepository {
 
 		}
 	}
-
-//	public static void main(String[] args) {
-//
-//		DemoRepository d = new DemoRepository();
-//
-//	}
 
 	private Connection getConnection() throws SQLException {
 		Connection conn;

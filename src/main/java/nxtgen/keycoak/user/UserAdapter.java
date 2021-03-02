@@ -21,6 +21,8 @@ public class UserAdapter extends AbstractUserAdapterFederatedStorage {
         setEmail(user.getEmail());
         setEnabled(user.isEnabled());
         setCreatedTimestamp(user.getCreated());
+//		setSingleAttribute(city, user.getCity());
+//        setCity(user.getCity());
     }
 
     @Override
@@ -38,6 +40,6 @@ public class UserAdapter extends AbstractUserAdapterFederatedStorage {
 
     @Override
     public void setUsername(String username) {
-        user.setUsername(username);
-    }
+		user.setUsername(username);
+	}
 }

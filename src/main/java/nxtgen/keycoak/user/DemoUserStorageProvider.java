@@ -158,6 +158,6 @@ public class DemoUserStorageProvider implements UserStorageProvider,
 
     @Override
     public List<UserModel> searchForUserByUserAttribute(String attrName, String attrValue, RealmModel realm) {
-        return Collections.emptyList();
-    }
+		return Collections.emptyList();
+	}
 }
